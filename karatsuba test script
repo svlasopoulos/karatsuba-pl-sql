@@ -1,0 +1,29 @@
+declare
+ret number;
+n1 number;
+n2 number;
+begin
+for i in 1..10 loop
+n1:=ROUND(DBMS_RANDOM.value(low => 10, high => 100));
+n2:=ROUND(DBMS_RANDOM.value(low => 10, high => 100));
+ret:=karatsuba(n1,n2);
+dbms_output.put_line(n1||' * '||n2||' is '||n1*n2||' karatsuba returns = '||ret);
+end loop;
+end;
+/
+
+SQL> /
+95 * 72 is 6840 karatsuba returns = 6840
+41 * 19 is 779 karatsuba returns = 779
+89 * 33 is 2937 karatsuba returns = 2937
+78 * 75 is 5850 karatsuba returns = 5850
+22 * 47 is 1034 karatsuba returns = 1034
+48 * 26 is 1248 karatsuba returns = 1248
+83 * 73 is 6059 karatsuba returns = 6059
+45 * 41 is 1845 karatsuba returns = 1845
+16 * 100 is 1600 karatsuba returns = 1600
+50 * 16 is 800 karatsuba returns = 800
+
+PL/SQL procedure successfully completed.
+
+SQL>
