@@ -1,2 +1,2 @@
 # karatsuba-pls-sql
-Karatsuba integer multiplication algorithm implemented with PL/SQL
+Karatsuba's algorithm for integer multiplication implemented in Oracle PL/SQL
